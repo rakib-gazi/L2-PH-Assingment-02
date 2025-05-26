@@ -217,7 +217,7 @@ SELECT * FROM students LIMIT 5 OFFSET 10;
 ```
 ***This will return the 11th to 15th rows of the students table.***
 
-###Special Use Case:
+### Special Use Case:
 When we want to page wise data The LIMIT and OFFSET clause are used together.
 
 ***1st Page***
