@@ -116,7 +116,7 @@ Then the result will be like this:
 ---
 
 
-## Q.What is the difference between the VARCHAR and CHAR data types.
+## Q.Explain the purpose of the WHERE clause in a SELECT statement.
 
 In structured Query Language (SQL), WHERE Clause is used to Filter data from a table based on specified conditions. Normally it's used with SELECT, UPDATE, and DELETE statements.
 
