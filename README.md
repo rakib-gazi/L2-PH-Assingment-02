@@ -1,6 +1,6 @@
 # Bonus Section
 
-## Explain the Primary Key and Foreign Key concepts in PostgreSQL.
+## Q.Explain the Primary Key and Foreign Key concepts in PostgreSQL.
 
 The primary key & Foreign key is the most import thing in  PostgreSQL, Which is used for data integrity & relationship. 
 
@@ -20,7 +20,7 @@ CREATE TABLE students (
     age INT
 );
 ```
-*** Student Table Output***
+***Student Table Output***
 ```
 |Student_id|name|age|
 |----------|----|---|
@@ -49,7 +49,7 @@ CREATE TABLE courses (
 );
 ```
 
-*** Course Table Output***
+***Course Table Output***
 ```
 |Course_id|Course_name|Student_id|
 |---------|-----------|----------|
@@ -69,8 +69,46 @@ CREATE TABLE courses (
 |1        |Math       |John      |25 |
 |2        |Science    |Peter     |35 |
 |3        |History    |Mary      |30 |
-
+```
 ---
 
 
+## Q.What is the difference between the VARCHAR and CHAR data types.
 
+### CHAR:
+1. CHAR stand for Character.
+2. It's a fixed-length string like Pone Number, PIN Code etc.
+3. It's used when the length of the string is fixed.
+4. If I store 'abc' in CHAR(5), it will store 'abc' with 2 spaces. Result like that "abe  ".
+5. For fixed length data, it's performance is Good.
+6. It's cost fixed memory if data is also small.
+
+### VARCHAR:
+1. VARCHAR stand for Variable Character.
+2. It's a variable-length string like Name, Address, email etc.
+3. It's used when the length of the string is variable.
+4. If I store 'abc' in VARCHAR(5), it will store 'abc' only. Result like that "abe", No extra space.
+5. For variable length data, it's performance is Good.
+6. It's cost variable memory if data is also variable.
+
+
+### Example:
+
+If I create a table with CHAR(5) and VARCHAR(5) like this:
+```
+CREATE TABLE test (
+    name CHAR(5),
+    Name VARCHAR(5)
+);
+```
+Then If I inset data here like this:
+```
+INSERT INTO test (name, Name)
+VALUES ('abc', 'abc');
+```
+Then the result will be like this:
+```
+    Char name output :  'abe  '; <!--with extra 2 space -->
+    VARCHAR Name output : 'abc';<!--without any space -->
+ 
+````
