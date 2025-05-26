@@ -194,3 +194,46 @@ WHERE class IS NULL;
 ```
 
 ---
+
+
+## Q.What are the LIMIT and OFFSET clauses used for?
+
+In structured Query Language (SQL), The LIMIT & OFFSET are used for filter data. Specially when we want to get a limited number of data from a table. The LIMIT clause is used to
+specify the maximum number of rows to return, while the OFFSET clause is used to specify how many data will skipped in return time.
+
+### LIMIT clause:
+The LIMIT clause is used to limit the number of rows returned in a query. It is used to restrict the number of rows that are returned from a query.
+
+```
+SELECT * FROM students LIMIT 5;
+````
+***This will return the first 5 rows of the students table.***
+
+### OFFSET clause:
+The OFFSET clause is used to specify how many rows to skip before starting to return rows.
+
+```
+SELECT * FROM students LIMIT 5 OFFSET 10;
+```
+***This will return the 11th to 15th rows of the students table.***
+
+###Special Use Case:
+When we want to page wise data The LIMIT and OFFSET clause are used together.
+
+***1st Page***
+```
+SELECT * FROM students LIMIT 10 OFFSET 0;
+```
+***2nd Page***
+```
+SELECT * FROM students LIMIT 10 OFFSET 10;
+```
+***3rd Page***
+```
+SELECT * FROM students LIMIT 10 OFFSET 20;
+```
+
+### Here per page will show 10 data.
+### Note: We always start count offset from 0. example: 0, 10, 20, 30, 40,50 etc.
+
+
