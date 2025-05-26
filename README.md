@@ -109,6 +109,88 @@ VALUES ('abc', 'abc');
 Then the result will be like this:
 ```
     Char name output :  'abe  '; <!--with extra 2 space -->
-    VARCHAR Name output : 'abc';<!--without any space -->
+    VARCHAR Name output : 'abc'; <!--without any space -->
  
 ````
+
+---
+
+
+## Q.What is the difference between the VARCHAR and CHAR data types.
+
+In structured Query Language (SQL), WHERE Clause is used to Filter data from a table based on specified conditions. Normally it's used with SELECT, UPDATE, and DELETE statements.
+
+### Purpose :
+WHERE clause is used when you want to select only specific data form database. That's means it's provided you specific data not Full data from table.
+
+### Without WHERE Clause The select statement like this:
+
+```
+SELECT * FROM students;
+```
+
+***It's select all data from students table.***
+
+### With WHERE Clause The select statement like this:
+```
+SELECT * FROM students
+WHERE class = 9;
+```
+***It's select only data from students table where class is 9.***
+
+### Syntax of WHERE Clause:
+***1. equal to : =***
+```
+SELECT * FROM students
+WHERE class = 9;
+```
+***2. not equal to : != or <>***
+```
+SELECT * FROM students
+WHERE class <> 9;
+
+SELECT * FROM students
+WHERE class != 9;
+```
+***3. greater than : >***
+```
+SELECT * FROM students
+WHERE class > 9;
+```
+***4. less than : <***
+```
+SELECT * FROM students
+WHERE class < 9;
+```
+***5. greater than or equal to : >=***
+```
+SELECT * FROM students
+WHERE class >= 9;
+```
+***6. less than or equal to : <=***
+```
+SELECT * FROM students
+WHERE class <= 9;
+```
+***7. LIKE : used for pattern matching***
+```
+SELECT * FROM students
+WHERE name LIKE 'A%';
+```
+***8. BETWEEN : used for range of values***
+```
+SELECT * FROM students
+WHERE class BETWEEN 9 AND 10;
+```
+***9. IN : used for multiple values***
+```
+SELECT * FROM students
+WHERE class IN (8, 9, 10);
+```
+***10. IS Null : used for checking null values***
+```
+SELECT * FROM students
+WHERE class IS NULL;
+```
+
+---
