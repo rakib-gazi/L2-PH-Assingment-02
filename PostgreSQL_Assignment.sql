@@ -22,23 +22,7 @@ CREATE TABLE sightings (
     notes VARCHAR(255) 
 )
 
-Drop TABLE sightings;
 
-insert into rangers (name, region) values 
-('Derek Fox', 'Coastal Pill');
-
-insert into species (common_name, scientific_name, discovery_date, conservation_status) values
-
-('Tiger', 'Panthera tigris', '2000-01-01', 'Endangered')
-
-insert into sightings (ranger_id, species_id, sighting_time, location, notes) values
-(4, 2, '2020-01-02', 'Northern Tress','very common');
-
-SELECT* FROM rangers;
-SELECT* FROM species;
-SELECT* FROM sightings;
-
-DELETE FROM sightings WHERE sighting_id = 7;
 
 -- Problem 1
 INSERT INTO rangers (name, region) VALUES ('Derek Fox', 'Coastal Plains');

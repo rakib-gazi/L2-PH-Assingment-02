@@ -237,3 +237,50 @@ SELECT * FROM students LIMIT 10 OFFSET 20;
 ### Note: We always start count offset from 0. example: 0, 10, 20, 30, 40,50 etc.
 
 
+---
+
+
+## Q.How can you modify data using UPDATE statements?
+
+In structured Query Language (SQL), using UPDATE statements, we can change or modify existing data in a table.
+
+### UPDATE Statement Basic Syntax:
+```
+UPDATE table_name
+SET column1 = value1, column2 = value2, ...
+WHERE condition;
+
+```
+
+***table_name:*** The name of the table that we want to update.
+***column1, column2, ...:*** The columns that we want to update.
+***value1, value2, ...:*** The new values for the specified columns.
+***condition:*** The condition that we want to apply to the update.
+***Note : If we don't specify a condition, all rows in the table will be updated.***
+
+### Example Table
+| id | name | age |
+|----|------|-----|
+| 1  | John | 25  |
+| 2  | Anna | 22  |
+| 3  | Peter| 21  |
+| 4  | Lina | 17  |
+| 5  | Tom  | 20  |
+
+### Now if we want to update the age of Peter to 23.
+
+```
+UPDATE students
+SET age = 23
+WHERE id = 3;
+```
+***Note: we have to use Primary key or unique key to update data. Otherwise, it will create data anomalies***
+
+### IF we want to update more than one column.
+
+```
+UPDATE students
+SET name = 'Lina', age = 18
+WHERE id = 4;
+```
+ 
